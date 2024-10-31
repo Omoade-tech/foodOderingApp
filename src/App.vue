@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       dishes: [
-        { id: 1, name: 'Pizza', price: 100.412, description: 'Delicious pizza with various toppings', image:'./image/pizza.jpg' },
+        { id: 1, name: 'Pizza', price: 100.412, description: 'Delicious pizza with various toppings', image:'../image/pizza.jpg' },
         { id: 2, name: 'Indomie', price: 150.123, description: 'Indomie is very sweet well well', image: './image/indomie.jpg' },
         { id: 3, name: 'Salad', price: 200.2, description: 'Fresh and healthy salad', image: './image/salad.avif' },
         { id: 4, name: 'Jollof Rice', price: 400.50, description: 'Nigeria jollof is the best', image: './image/jollofrice.jpg' },
