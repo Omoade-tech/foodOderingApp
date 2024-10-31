@@ -16,12 +16,12 @@ export default {
   data() {
     return {
       dishes: [
-        { id: 1, name: 'Pizza', price: 100.412, description: 'Delicious pizza with various toppings', image:'/public/pizza.jpg' },
-        { id: 2, name: 'Indomie', price: 150.123, description: 'Indomie is very sweet well well', image: '/public/indomie.jpg' },
-        { id: 3, name: 'Salad', price: 200.2, description: 'Fresh and healthy salad', image: '/public/salad.jpg' },
-        { id: 4, name: 'Jollof Rice', price: 400.50, description: 'Nigeria jollof is the best', image: '/public/jollofrice.jpg' },
-        { id: 5, name: 'Fried Rice', price: 200.890, description: 'Very delicious and spicy', image: '/public/friedrice.jpg' },
-        { id: 6, name: 'Spaghetti', price: 50.500, description: 'Pasta spaghetti with meatball', image: '/public/spaghetti.jpg' },
+        { id: 1, name: 'Pizza', price: 100.412, description: 'Delicious pizza with various toppings', image:'./public/image/pizza.jpg' },
+        { id: 2, name: 'Indomie', price: 150.123, description: 'Indomie is very sweet well well', image: './public/image/indomie.jpg' },
+        { id: 3, name: 'Salad', price: 200.2, description: 'Fresh and healthy salad', image: './public/image/salad.jpg' },
+        { id: 4, name: 'Jollof Rice', price: 400.50, description: 'Nigeria jollof is the best', image: './public/image/jollofrice.jpg' },
+        { id: 5, name: 'Fried Rice', price: 200.890, description: 'Very delicious and spicy', image: './public/image/friedrice.jpg' },
+        { id: 6, name: 'Spaghetti', price: 50.500, description: 'Pasta spaghetti with meatball', image: './public/image/spaghetti.jpg' },
       ],
       cart: [],
       selectedDish: null,
