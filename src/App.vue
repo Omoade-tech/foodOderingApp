@@ -16,12 +16,12 @@ export default {
   data() {
     return {
       dishes: [
-        { id: 1, name: 'Pizza', price: 100.412, description: 'Delicious pizza with various toppings', image:'./src/assets/image/pizza.jpg' },
-        { id: 2, name: 'Indomie', price: 150.123, description: 'Indomie is very sweet well well', image: './src/assets/image/indomie.jpg' },
-        { id: 3, name: 'Salad', price: 200.2, description: 'Fresh and healthy salad', image: './src/assets/image/salad.avif' },
-        { id: 4, name: 'Jollof Rice', price: 400.50, description: 'Nigeria jollof is the best', image: './src/assets/image/jollofrice.jpg' },
-        { id: 5, name: 'Fried Rice', price: 200.890, description: 'Very delicious and spicy', image: './src/assets/image/friedrice.jpg' },
-        { id: 6, name: 'Spaghetti', price: 50.500, description: 'Pasta spaghetti with meatball', image: './src/assets/image/spaghetti.jpg' },
+        { id: 1, name: 'Pizza', price: 100.412, description: 'Delicious pizza with various toppings', image:'./image/pizza.jpg' },
+        { id: 2, name: 'Indomie', price: 150.123, description: 'Indomie is very sweet well well', image: './image/indomie.jpg' },
+        { id: 3, name: 'Salad', price: 200.2, description: 'Fresh and healthy salad', image: './image/salad.avif' },
+        { id: 4, name: 'Jollof Rice', price: 400.50, description: 'Nigeria jollof is the best', image: './image/jollofrice.jpg' },
+        { id: 5, name: 'Fried Rice', price: 200.890, description: 'Very delicious and spicy', image: './image/friedrice.jpg' },
+        { id: 6, name: 'Spaghetti', price: 50.500, description: 'Pasta spaghetti with meatball', image: './image/spaghetti.jpg' },
       ],
       cart: [],
       selectedDish: null,
@@ -44,7 +44,7 @@ export default {
             // Check if the cart has more than 5 items
             const totalItems = this.cart.reduce((total, item) => total + item.quantity, 0);
       if (totalItems > 5) {
-        alert('You have more than 5 items in your cart!');
+        alert('You have more than 5 item in your cart!');
       }
 
     },
