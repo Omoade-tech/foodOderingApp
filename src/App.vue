@@ -16,12 +16,12 @@ export default {
   data() {
     return {
       dishes: [
-        { id: 1, name: 'Pizza', price: 100.412, description: 'Delicious pizza with various toppings', image:'../image/pizza.jpg' },
-        { id: 2, name: 'Indomie', price: 150.123, description: 'Indomie is very sweet well well', image: '../image/indomie.jpg' },
+        { id: 1, name: 'Pizza', price: 100.412, description: 'Delicious pizza with various toppings', image:'./image/pizza.jpg' },
+        { id: 2, name: 'Indomie', price: 150.123, description: 'Indomie is very sweet well well', image: './image/indomie.jpg' },
         { id: 3, name: 'Salad', price: 200.2, description: 'Fresh and healthy salad', image: '../image/salad.avif' },
-        { id: 4, name: 'Jollof Rice', price: 400.50, description: 'Nigeria jollof is the best', image: '../image/jollofrice.jpg' },
-        { id: 5, name: 'Fried Rice', price: 200.890, description: 'Very delicious and spicy', image: '../image/friedrice.jpg' },
-        { id: 6, name: 'Spaghetti', price: 50.500, description: 'Pasta spaghetti with meatball', image: '../image/spaghetti.jpg' },
+        { id: 4, name: 'Jollof Rice', price: 400.50, description: 'Nigeria jollof is the best', image: './image/jollofrice.jpg' },
+        { id: 5, name: 'Fried Rice', price: 200.890, description: 'Very delicious and spicy', image: './image/friedrice.jpg' },
+        { id: 6, name: 'Spaghetti', price: 50.500, description: 'Pasta spaghetti with meatball', image: './image/spaghetti.jpg' },
       ],
       cart: [],
       selectedDish: null,
@@ -73,7 +73,7 @@ export default {
 <style>
 #app {
   font-family: Arial, sans-serif;
-  max-width: 1200px; /* Increase max-width */
+  max-width: 1200px; 
   margin: 0 auto;
   padding: 20px;
   color: aliceblue;
@@ -86,18 +86,15 @@ h1 {
 
   justify-content: space-around;
 }
-
-/* Flex container to align dish list and cart side by side */
 .main-content {
   display: flex;
   gap: 20px;
   align-items: flex-start;
 }
-/* Left section for food ordering */
+
 .left-section {
   flex: 2;
 }
-/* Right section for cart summary and delivery form */
 .right-section {
   flex: 1;
   display: flex;
