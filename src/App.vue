@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     <h1> FOOD ORDERING APP</h1>
-    <DishList :dishes="dishes" @add-to-cart="addToCart" @show-details="showDishDetails" />
-    <CartSummary :cart="cart" :total-price="totalPrice" @remove-from-cart="removeFromCart" /> <!-- Add remove event -->
-    <DeliveryForm @place-order="placeOrder" :cart="cart" />
+    <div class="main-content">
+      <div class="left-section">
+        <DishList :dishes="dishes" @add-to-cart="addToCart" @show-details="showDishDetails" />
+      </div>
+      <div class="right-section">
+        <CartSummary :cart="cart" :total-price="totalPrice" @remove-from-cart="removeFromCart" />
+        <DeliveryForm @place-order="placeOrder" :cart="cart" />
+      </div>
+    </div>
     <Teleport to="body">
       <DishDetails v-if="selectedDish" :dish="selectedDish" @close="closeDishDetails" />
     </Teleport>
@@ -68,8 +74,6 @@ export default {
 };
 </script>
 
-
-
 <style>
 #app {
   font-family: Arial, sans-serif;
@@ -89,14 +93,17 @@ h1 {
 .main-content {
   display: flex;
   gap: 20px;
-  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
 .left-section {
-  flex: 2;
+  flex: 0 0 70%;
+  min-width: 300px;
 }
+
 .right-section {
-  flex: 1;
+  flex: 0 0 30%;
+  min-width: 200px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -116,11 +123,60 @@ button {
   padding: 10px;
   cursor: pointer;
 }
+
+.dish-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.dish-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.dish-item:hover {
+  transform: translateY(-5px);
+}
+
+.dish-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.orderc, .orderb {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.orderc {
+  background: #4CAF50;
+  color: white;
+}
+
+.orderb {
+  background: #2196F3;
+  color: white;
+}
+
+.orderc:hover, .orderb:hover {
+  opacity: 0.8;
+}
+
 @media screen and (min-width: 320px) and (max-width: 425px) {
   .main-content {
     display: flex;
-  flex-direction: column;
-}
-
+    flex-direction: column;
+  }
 }
 </style>

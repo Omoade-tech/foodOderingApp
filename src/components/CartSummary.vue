@@ -32,6 +32,7 @@ export default {
   margin-top: 20px;
   padding: 10px;
   border: 1px solid #ddd;
+  margin-right: 20px;
 }
 button {
   background-color: black;
